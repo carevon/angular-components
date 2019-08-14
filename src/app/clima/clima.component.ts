@@ -31,11 +31,10 @@ export class ClimaComponent implements OnInit {
     var data = await this.http.get(this.url).toPromise();
     var temp_min = data['main']['temp_min'];
     var temp_max = data['main']['temp_max'];
-    this.data = temp_max;
+    this.data = data;
     console.log(data);
     console.log(temp_min);
     console.log(temp_max);
-    return temp_min;
   }
 
 }

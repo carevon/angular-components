@@ -4,8 +4,13 @@
 
 latitude: {{latitude}}<br/>
 longitude: {{longitude}}<br/>
-<!-- Obrigando o angular a formatar para json-->
+<!-- Obrigando o angular a formatar para json
 <pre>Temperatura maxima: {{data | json}}</pre>
+-->
+<h1>Minha temperatura</h1>
+<p>{{data && data.main.temp?data.main.temp:"Não há dados"}}</p>
+<h1>Minha localização</h1>
+<p>{{data && data.name? data.name:"Não há dados"}}</p>
 <button type="button" name="button" (click)="getPositionData()">
   Clima
 </button>
