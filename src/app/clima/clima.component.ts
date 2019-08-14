@@ -25,7 +25,7 @@ export class ClimaComponent implements OnInit {
   // Função para pegar dados da openweathermap
   async getPositionData(){
     // preparar a url para o openweathermap
-    this.url = `${this.url}?lat=${this.latitude}&lon=${this.longitude}&APIKEY=${this.apikey}`;
+    this.url = `${this.url}?lat=${this.latitude}&lon=${this.longitude}&APIKEY=${this.apikey}&units=metric`;
 
     // o js não esperaria a resposta do servidor, por isso devemos utilizar o await
     var data = await this.http.get(this.url).toPromise();
